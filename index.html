@@ -1,0 +1,148 @@
+<!--Requirement: S2 QAP3 JavaScript 
+      Author: Brenda Armstrong, SD10
+      Date: 2024-03-26 -->
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Linking Skeleton CSS for basic styles -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+          crossorigin="anonymous"
+        />
+        <!-- Custom styles for the form and display areas -->
+        <style>
+          body {
+            line-height: 2;
+            letter-spacing: 0.05em;
+            text-align: justify;
+          }
+          .question-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center align items horizontally */
+            background-color: #1b272a;
+            color: white;
+            padding: 10px;
+          }
+          .question {
+            margin: 0;
+          }
+          .answer {
+            padding: 10px;
+            background-color: #0b8db2;
+            color: white;
+            margin-bottom: 20px;
+          }
+          .custom-form {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffbc11;
+            width: 300px;
+            font-size: 0.9em;
+          }
+
+          .custom-form label {
+          color: black; 
+
+          .custom-form label,
+          .custom-form input,
+          .custom-form button {
+            display: block;
+            margin-bottom: 5px;
+          }
+          #displayArea {
+            background-color: #ffbc11; 
+            padding: 10px;
+            border-radius: 5px;
+          }
+          .question-container button {
+            margin-left: 25px; 
+          }
+
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+          th, td {
+            text-align: left;
+            padding: 8px;
+          }
+
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+
+        </style>
+        
+        <title>QAP3 Practice Questions Solutions - Brenda Armstrong, SD10</title>
+      
+      </head>
+      
+      <body>
+        <div class="container">
+          <h4>QAP3 Practice Questions Solutions - Brenda Armstrong, SD10</h4>
+      
+          <!-- Question 1: User creation form -->
+          <section id="question1">
+            <div class="question-container">
+              <span class="question">Question#01</span>
+            </div>
+            <div class="answer">
+              <div class="custom-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter name">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter age">
+                <div class="buttons-container" style="display: flex; justify-content: start;">
+                  <button onclick="makeObj()">Make</button>
+                  <button onclick="displayObj()">Display</button>
+                </div>
+                <div id="displayArea"><!-- This area will display user objects --></div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Question 2: JSON output display -->
+          <section id="question2">
+            <div class="question-container">
+          <span class="question">Question#02</span>
+              <button id="btnq2" onclick="showJSON()">Show JSON</button>
+            </div>
+            <div class="answer" id="q2">
+              <!-- JSON data will be displayed here -->
+            </div>
+          </section>
+      
+          <!-- Question 3: Todo list from API -->
+          <section id="question3">
+            <div class="question-container">
+              <span class="question">Question#03  </span>
+              <button id="btnq3" onclick="showTodos()">Show Todos</button>
+            </div>
+            <br>
+            <div class="sort-options">
+              <button onclick="showTodos('id')">Sort by Task ID</button>
+              <button onclick="showTodos('status')">Sort by Status</button>
+              <button onclick="showTodos('completion')">Sort by Completion</button>
+              <button onclick="showTodos('owner')">Sort by Owner</button>
+          </div>
+            
+          <div class="answer" id="q3">
+              <!-- To do list data from the API call will be displayed here -->
+            </div>
+          </section>
+        </div>
+      
+        <!-- Link the practice.js script file -->
+        <script src="scripts/s2qap3_ba.js"></script>
+      </body>
+      </html>
+      
